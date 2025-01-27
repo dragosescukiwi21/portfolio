@@ -12,7 +12,7 @@ export default function Photos() {
     <section>
       <h1 className="mb-8 text-2xl font-medium tracking-tight">Photos</h1>
       <ImageGrid
-        columns={3}
+        columns={2}
         images={[
           {
             src: "/photos/photo1.jpg",
