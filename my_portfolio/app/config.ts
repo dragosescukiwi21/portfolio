@@ -10,6 +10,6 @@ export const metaData = {
 export const socialLinks = {
   github: "https://github.com/dragosescukiwi21",
   instagram: "https://www.instagram.com/",
-  behance: "https://www.behance.net/drxgfx",
+  linkedin: "https://www.behance.net/drxgfx",
   email: "mailto:example@gmail.com",
 };

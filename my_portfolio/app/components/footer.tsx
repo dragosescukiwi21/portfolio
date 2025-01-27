@@ -26,7 +26,7 @@ function SocialLinks() {
   return (
     <div className="flex text-lg gap-3.5 float-right transition-opacity duration-300 hover:opacity-90">
       <SocialLink href={socialLinks.github} icon={FaGithub} />
-      <SocialLink href={socialLinks.behance} icon={FaBehance} />
+      <SocialLink href={socialLinks.linkedin} icon={FaBehance} />
       <SocialLink href={socialLinks.email} icon={TbMailFilled} />
     </div>
   );
@@ -38,7 +38,7 @@ export default function Footer() {
       <time>© {YEAR}</time>{" "}
       <a
         className="no-underline"
-        href={socialLinks.twitter}
+        href={socialLinks.linkedin}
         target="_blank"
         rel="noopener noreferrer"
       >
