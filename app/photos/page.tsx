@@ -15,6 +15,7 @@ export default function Photos() {
         columns={2}
         images={[
           {
+<<<<<<< HEAD
             src: "/photos/photo1.jpg",
             alt: "Roman columns",
             href: "https://unsplash.com/photos/people-walking-near-building-during-daytime-dFLBDQQeffU?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash",
@@ -66,6 +67,19 @@ export default function Photos() {
           { src: "/photos/photo4.jpg", alt: "Eiffel Tower" },
           { src: "/photos/photo5.jpg", alt: "Taj Mahal" },
           { src: "/photos/photo6.jpg", alt: "Colosseum" },
+=======
+            src: "/photos/2022-11-13.jpg",
+            alt: "UBB Central",
+          },
+          {
+            src: "/photos/2023-02-12.jpg",
+            alt: "UBB Courtyard",
+          },
+          {
+            src: "/photos/2023-06-11.jpg",
+            alt: "UBB",
+          },
+>>>>>>> ec6dd5d (update)
         ]}
       />
     </section>
