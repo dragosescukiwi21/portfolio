@@ -54,13 +54,6 @@ export function getBlogPosts() {
   return getMDXData(path.join(process.cwd(), "content"));
 }
 
-<<<<<<< HEAD
-export function formatDate(date: string, includeRelative = false) {
-  let currentDate = new Date();
-  if (!date.includes("T")) {
-    date = `${date}T00:00:00`;
-  }
-=======
 export function formatDate(date?: string, includeRelative = false) {
   if (!date) {
     // Fallback to current date
@@ -70,7 +63,6 @@ export function formatDate(date?: string, includeRelative = false) {
     date = `${date}T00:00:00`;
   }
   let currentDate = new Date();
->>>>>>> ec6dd5d (update)
   let targetDate = new Date(date);
 
   let yearsAgo = currentDate.getFullYear() - targetDate.getFullYear();
