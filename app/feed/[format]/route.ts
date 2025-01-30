@@ -48,11 +48,14 @@ export async function GET(
   const allPosts = await getBlogPosts();
 
   allPosts.forEach((post) => {
+  
     const postUrl = `${BaseUrl}blog/${post.slug}`;
     const categories = post.metadata.tags
       ? post.metadata.tags.split(",").map((tag) => tag.trim())
       : [];
-
+  
+    const postDate = new Date(post.metadata.publishedAt);
+    
     feed.addItem({
       title: post.metadata.title,
       id: postUrl,
@@ -62,9 +65,10 @@ export async function GET(
         name: tag,
         term: tag,
       })),
-      date: new Date(post.metadata.publishedAt),
+      date: isNaN(postDate.getTime()) ? new Date() : postDate,
     });
   });
+  
 
   const responseMap: Record<string, { content: string; contentType: string }> =
     {
