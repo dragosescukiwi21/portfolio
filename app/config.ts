@@ -1,15 +1,15 @@
 export const metaData = {
-  baseUrl: "https://nextfolio-template.vercel.app/",
+  baseUrl: "https://dragosescu.com/",
   title: "@dragosescu",
-  name: "Sirius",
+  name: "dragosescu",
   ogImage: "/opengraph-image.png",
   description:
-    "Computer Science @ UBB, interested about AI/ML and occasionally a graphic designer.",
+    "Sarmasan Dragos-Cosmin, Math & Computer Science @ UBB.",
 };
 
 export const socialLinks = {
   github: "https://github.com/dragosescukiwi21",
   instagram: "https://www.instagram.com/",
   linkedin: "https://www.behance.net/drxgfx",
-  email: "mailto:example@gmail.com",
+  email: "mailto:gugelaso@gmail.com",
 };

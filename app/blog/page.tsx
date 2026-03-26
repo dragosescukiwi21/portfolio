@@ -11,8 +11,9 @@ export default function BlogPosts() {
 
   return (
     <section>
-      <h1 className="mb-8 text-2xl font-medium tracking-tight">Blogs</h1>
-      <div>
+      <h1 className="mb-3 text-3xl font-semibold tracking-tight">blog</h1>
+      <hr className="page-title-divider" />
+      <div className="flex flex-col gap-0">
         {allBlogs
           .sort((a, b) => {
             if (
@@ -26,17 +27,15 @@ export default function BlogPosts() {
           .map((post) => (
             <Link
               key={post.slug}
-              className="flex flex-col space-y-1 mb-5 transition-opacity duration-200 hover:opacity-80"
               href={`/blog/${post.slug}`}
+              className="group flex items-baseline justify-between p-3 rounded-lg backdrop-blur-md bg-white/40 dark:bg-neutral-900/40 border border-transparent hover:border-neutral-200 dark:hover:border-neutral-800 transition-all duration-200 shadow-sm hover:shadow-md"
             >
-              <div className="w-full flex flex-col sm:flex-row justify-between items-start sm:items-center space-y-1 sm:space-y-0 sm:space-x-2">
-                <h2 className="text-black dark:text-white">
-                  {post.metadata.title}
-                </h2>
-                <p className="text-neutral-600 dark:text-neutral-400 tabular-nums text-sm">
-                  {formatDate(post.metadata.publishedAt, false)}
-                </p>
-              </div>
+              <h2 className="text-base sm:text-lg font-medium text-neutral-800 dark:text-neutral-200 group-hover:text-black dark:group-hover:text-white transition-colors">
+                {post.metadata.title}
+              </h2>
+              <span className="text-sm text-neutral-400 dark:text-neutral-500 tabular-nums shrink-0 ml-4">
+                {formatDate(post.metadata.publishedAt, false)}
+              </span>
             </Link>
           ))}
       </div>

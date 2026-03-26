@@ -6,7 +6,9 @@ import { Navbar } from "./components/nav";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Footer from "./components/footer";
+import { RetroGrid } from "./components/background-dp";
 import { ThemeProvider } from "./components/theme-switch";
+import { PageTransition } from "./components/page-transition";
 import { metaData } from "./config";
 
 export const metadata: Metadata = {
@@ -75,15 +77,16 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased flex flex-col items-center justify-center mx-auto mt-2 lg:mt-8 mb-20 lg:mb-40">
+        <RetroGrid className="opacity-90 dark:opacity-40" angle={45} cellSize={70} opacity={0.4} lineColor="#3b3a3aff" />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <main className="flex-auto min-w-0 mt-2 md:mt-6 flex flex-col px-6 sm:px-4 md:px-0 max-w-[640px] w-full">
+          <main className="flex-auto min-w-0 mt-2 md:mt-6 flex flex-col px-6 sm:px-4 md:px-0 max-w-[780px] w-full">
             <Navbar />
-            {children}
+            <PageTransition>{children}</PageTransition>
             <Footer />
             <Analytics />
             <SpeedInsights />
