@@ -77,7 +77,7 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased flex flex-col items-center justify-center mx-auto mt-2 lg:mt-8 mb-20 lg:mb-40">
-        <RetroGrid className="opacity-90 dark:opacity-40" angle={45} cellSize={70} opacity={0.4} lineColor="#3b3a3aff" />
+        <RetroGrid className="opacity-90 dark:opacity-40" angle={40} cellSize={100} opacity={0.4} lineColor="#3b3a3aff" />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

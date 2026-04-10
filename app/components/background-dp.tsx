@@ -26,7 +26,7 @@ export interface RetroGridProps {
 export function RetroGrid({
   className,
   children,
-  angle = 65,
+  angle = 75,
   cellSize = 60,
   opacity = 0.5,
   lineColor = "var(--sh-string)", // You can also customize this via tailwind if preferred, for now using css custom property isn't bad but let's stick to what's there
